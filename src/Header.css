@@ -1,0 +1,244 @@
+/* Main Header Container */
+.futuristic-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 20px;
+  background: rgba(5, 5, 5, 0.9);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Flex Container for Nav */
+.glass-nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0;
+  background: linear-gradient(to right, #fff, #888);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-text span {
+  color: #0070f3;
+  -webkit-text-fill-color: #0070f3;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-group {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  text-decoration: none;
+  /* For Link components */
+  display: inline-block;
+}
+
+.nav-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-btn.logout {
+  color: #ff4444;
+}
+
+.login-btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Right Side Icons & Search */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.9rem;
+  width: 200px;
+  transition: width 0.3s ease;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.cart-container {
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.cart-icon {
+  font-size: 1.2rem;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  background: #0070f3;
+  color: white;
+  font-size: 0.7rem;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Mobile Menu Button - Hidden on Desktop */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-text {
+    font-size: 1.4rem;
+  }
+
+  /* Hide desktop search and icons, move to mobile menu */
+  .search-box {
+    display: none;
+  }
+
+  .header-icons .cart-container {
+    /* Keep cart visible on header for quick access, but maybe smaller */
+    display: none;
+    /* Move to menu as per request or keep? User said "cant see cart icon". Let's keep it in menu if hidden, or fix overflow. */
+  }
+
+  /* Actually, let's keep Cart icon visible but ensure no overflow */
+  .header-icons {
+    gap: 10px;
+  }
+
+  .glass-nav {
+    padding: 0 10px;
+    /* Reduce padding */
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    margin-left: auto;
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    /* Below header */
+    left: 0;
+    right: 0;
+    background: #0a0a0a;
+    flex-direction: column;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(-150%);
+    transition: transform 0.3s ease;
+    z-index: 2000;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .auth-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Mobile Search in Menu */
+  .mobile-search {
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .mobile-search input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: white;
+  }
+}
+
+/* Ensure no global horizontal scroll */
+body {
+  overflow-x: hidden;
+  width: 100%;
+}

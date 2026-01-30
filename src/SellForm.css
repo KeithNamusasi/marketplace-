@@ -1,0 +1,86 @@
+.sell-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.sell-form-container {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 112, 243, 0.3);
+  padding: 40px;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 40px rgba(0, 112, 243, 0.1);
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.form-title span {
+  color: #0070f3;
+  text-shadow: 0 0 10px #0070f3;
+}
+
+.futuristic-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.input-group input, .input-group select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: white;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #0070f3;
+  box-shadow: 0 0 15px rgba(0, 112, 243, 0.2);
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.launch-btn {
+  margin-top: 10px;
+  background: linear-gradient(45deg, #0070f3, #7928ca);
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.launch-btn:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(121, 40, 202, 0.4);
+}

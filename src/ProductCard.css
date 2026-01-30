@@ -1,0 +1,81 @@
+.card-glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  color: white;
+}
+
+.card-glass:hover {
+  transform: translateY(-10px);
+  border-color: #0070f3; /* Matching your logo glow */
+  box-shadow: 0 10px 30px rgba(0, 112, 243, 0.2);
+}
+
+.card-image {
+  position: relative;
+  height: 200px;
+  width: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0, 112, 243, 0.8);
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.card-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #0070f3;
+  margin: 10px 0;
+}
+
+.card-footer {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-details {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-buy {
+  flex: 2;
+  background: linear-gradient(45deg, #0070f3, #7928ca);
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
